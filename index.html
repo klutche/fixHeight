@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>fixHeight</title>
+<link rel="stylesheet" href="style.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+$(window).load(function() {
+	$('.fixBox').each(function(i, box) {
+		var maxHeight = 0;
+		$(box).find('.fixItem').each(function() {
+			if ($(this).height() > maxHeight) maxHeight = $(this).height();
+		});
+		$(box).find('.fixItem').height(maxHeight);
+	});
+});
+</script>
+</head>
+<body>
+
+<div class="fixBox">
+
+<div class="fixItem">
+テキスト
+</div><!-- /fixItem -->
+
+<div class="fixItem">
+テキスト<br>
+テキスト<br>
+テキスト<br>
+テキスト
+</div><!-- /fixItem -->
+
+<div class="fixItem">
+テキスト<br>
+テキスト
+</div><!-- /fixItem -->
+
+</div><!-- /fixBox -->
+
+<div class="fixBox">
+
+<div class="fixItem">
+<img src="img/120x200.jpg" width="120" height="200" alt="上椎葉ダム"><br>
+</div><!-- /fixItem -->
+
+<div class="fixItem">
+<img src="img/120x40.jpg" width="120" height="40" alt="緑川ダム"><br>
+</div><!-- /fixItem -->
+
+<div class="fixItem">
+<img src="img/120x100.jpg" width="120" height="100" alt="上椎葉ダム"><br>
+</div><!-- /fixItem -->
+
+</div><!-- /fixBox -->
+
+</body>
+</html>
